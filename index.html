@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" defer href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <script src="/src/scripts/index.js" defer></script>
     <title>Página Institucional Genérica</title>
   </head>
   <body>
     <!-- ====== Header ====== -->
-    <header>
-      <div>
-        <img src="" alt="" />
-        <button>Entrar para próxima turma</button>
+    <header class="cabecalho">
+      <div class="cabecalho__nav">
+        <img src="/src/assets/logo.svg" alt="logo" />
+        <button class="btnModal">Entrar para próxima turma</button>
       </div>
     </header>
     <main>
       <!-- ====== Section Banner ====== -->
-      <section>
-        <div>
+      <section class="section__banner">
+        <div class="section__banner--itens">
           <h1>Desenvolvendo <span>suas</span> próximas habilidades</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -28,8 +32,8 @@
       </section>
 
       <!-- ====== Section About ====== -->
-      <section>
-        <div>
+      <section class="section__about">
+        <div class="section__about--itens">
           <h2>Quem somos nós?</h2>
           <p>
             It is a long established fact that a reader will be distracted by
@@ -41,24 +45,24 @@
       </section>
 
       <!-- ====== Section FAQ ====== -->
-      <section>
-        <div>
+      <section class="section__faq">
+        <div class="section__faq--div">
           <!-- LEFT SIDE -->
           <div>
-            <div>
+            <div class="section__faq--left">
               <h2>Dúvidas frequentes</h2>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </p>
-              <button>Entrar para próxima turma</button>
+              <button class="btnModal">Entrar para próxima turma</button>
             </div>
           </div>
           <!-- RIGHT SIDE -->
-          <ul>
+          <ul class="section__faq--right">
             <!-- Question 1 -->
-            <li>
+            <li class="section__faq--right--itens">
               <h3>Quais matérias vou pagar?</h3>
               <p>
                 It is a long established fact that a reader will be distracted
@@ -68,7 +72,7 @@
               </p>
             </li>
             <!-- Question 2 -->
-            <li>
+            <li class="section__faq--right--itens">
               <h3>Tenho direito à cancelamento?</h3>
               <p>
                 It is a long established fact that a reader will be distracted
@@ -78,7 +82,7 @@
               </p>
             </li>
             <!-- Question 3 -->
-            <li>
+            <li class="section__faq--right--itens" > 
               <h3>O acesso do curso é vitalício?</h3>
               <p>
                 It is a long established fact that a reader will be distracted
@@ -88,7 +92,7 @@
               </p>
             </li>
             <!-- Question 4 -->
-            <li>
+            <li class="section__faq--right--itens">
               <h3>O acesso do curso é vitalício?</h3>
               <p>
                 It is a long established fact that a reader will be distracted
@@ -102,11 +106,11 @@
       </section>
 
       <!-- ====== Section Comments ====== -->
-      <section>
-        <div>
+      <section class="section__comments">
+        <div class="section__comments--div">
           <!-- RIGHT SIDE -->
           <div>
-            <div>
+            <div class="section__comments--right">
               <h2>O que nossos alunos comentam?</h2>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -116,10 +120,10 @@
             </div>
           </div>
           <!-- LEFT SIDE -->
-          <ul>
+          <ul class="section__comments--left">
             <!-- Comment 1 -->
-            <li>
-              <div>
+            <li class="section__comments--list">
+              <div class="section__comments--identificacao">
                 <h3>Júlia Lima</h3>
                 <p>Aluna na turma 2019</p>
               </div>
@@ -131,8 +135,8 @@
               </p>
             </li>
             <!-- Comment 2 -->
-            <li>
-              <div>
+            <li class="section__comments--list">
+              <div class="section__comments--identificacao">
                 <h3>Carlos Ino</h3>
                 <p>Aluno na turma 2020</p>
               </div>
@@ -144,8 +148,8 @@
               </p>
             </li>
             <!-- Comment 3 -->
-            <li>
-              <div>
+            <li class="section__comments--list">
+              <div class="section__comments--identificacao">
                 <h3>Camila Dias</h3>
                 <p>Aluna na turma 2019</p>
               </div>
@@ -157,8 +161,8 @@
               </p>
             </li>
             <!-- Comment 4 -->
-            <li>
-              <div>
+            <li class="section__comments--list">
+              <div class="section__comments--identificacao">
                 <h3>João Vaz</h3>
                 <p>Aluno na turma 2019</p>
               </div>
@@ -170,8 +174,8 @@
               </p>
             </li>
             <!-- Comment 5 -->
-            <li>
-              <div>
+            <li class="section__comments--list">
+              <div class="section__comments--identificacao">
                 <h3>Gio Oliveira</h3>
                 <p>Aluna na turma 2019</p>
               </div>
@@ -188,11 +192,23 @@
     </main>
 
     <!-- ====== Footer ====== -->
-    <footer>
-      <img src="" alt="" />
+    <footer class="rodape">
+      <img src="/src/assets/logo.svg" alt="logo" />
     </footer>
 
     <!-- ====== Modal ====== -->
-    <dialog></dialog>
+    <dialog id="modalController">
+      <div class="modal__Container">
+        <form class="form">
+          <div class="form__label--button">
+            <label for="cadastro">Cadastro</label>
+            <button type="button" id="closeModal">X</button>
+          </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          <input type="email" name="email" id="email" placeholder="Digitar email">
+          <button type="submit" id="btnSubmit">Entrar na lista para próxima turma</button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>
